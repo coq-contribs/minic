@@ -151,26 +151,6 @@ case n.
 rewrite H1.
 replace lk with x0; trivial.
 injection H4; auto.
-
-(*
-Realizer bdecl_mapk.
-(Repeat Program; (Clear bdecl_mapk; Auto with datatypes)).
-(Unfold bdecl_IsDefined;
-  Unfold bdecl_AssocValIs;(Split;Auto with datatypes);
-   Red;Intros (d, (lk, (H1, H2)));Auto with datatypes).
-(Case a0; Auto with datatypes).
-(Case a0; Split;Auto with datatypes).
-Unfold bdecl_IsDefined;Unfold bdecl_IsDefined in H0.
-Unfold bdecl_AssocValIs;Unfold bdecl_AssocValIs in H0.
-Red;Intros (d,(lk,(H1,H2)));Apply H0.
-(Split with d; Split with lk; Split).
-Assumption.
-Inversion H2.
- (Injection H3;Intros eq1 eq2).
- (Rewrite <- eq2 in H1;Rewrite <- H in H1).
- (Absurd (In k kl); Assumption).
- Assumption.
-*)
 Defined.
 
 Definition bdecl_decIsDefined :

@@ -152,56 +152,6 @@ red in |- *; simpl in |- *.
 case (eqKeyDec k0 k1); intro.
 intros; absurd (k0 = k1); assumption.
 intro; apply H2; rewrite <- H1; assumption.
-
-(* Realizer sdecl_mapk.
-(Repeat Program; (Clear sdecl_mapk; Auto with datatypes)).
-
-(Unfold sdecl_IsDefined;
-  Unfold sdecl_AssocValIs;(Split;Auto with datatypes);
-   Red;Intros (d, H);Discriminate H).
-Simpl.
-
-Unfold sdecl_AssocValIs; Simpl.
-Case (eqKeyDec k k1).
-Auto.
-Intros; Absurd k=k1; Assumption.
-
-Unfold sdecl_AssocValIs.
-Generalize a0; Clear a0.
-Unfold sdecl_AssocValIs.
-Simpl.
-Case (eqKeyDec k k1).
-Intro; Absurd k=k1; Assumption.
-Trivial.
-
-(Case a0; Split; Auto with datatypes).
-
-Generalize H0; Clear H0.
-Rewrite <- H.
-Unfold sdecl_IsDefined;Unfold sdecl_AssocValIs.
-Intro H0.
-Red; Intro abs.
-Apply H0.
-Generalize abs;Clear abs.
-Simpl.
-Case (eqKeyDec k k1); [Intro; Absurd k=k1; Assumption | Trivial].
-Defined.
-
-Definition sdecl_decIsDefined : 
-  (m:sdecl)(k:Key){(sdecl_IsDefined m k)}+{~(sdecl_IsDefined m k)}.
-Intros m k.
-Unfold sdecl_IsDefined; Unfold sdecl_AssocValIs.
-Case (sdecl_mapkSpec m k).
-Unfold sdecl_AssocValIs.
-(Intros ((k1, d), (H1, H2)); EAuto with datatypes).
-
-Unfold sdecl_IsDefined.
-Unfold sdecl_AssocValIs.
-Intros (k, (eq, H)).
-Right.
-Rewrite eq.
-Assumption.
-*)
 Defined.
 
 Section Well_Formed.
