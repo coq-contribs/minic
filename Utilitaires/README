@@ -1,0 +1,58 @@
+===========================================================================
+                        GENERAL DESCRIPTION
+===========================================================================
+
+Some general purpose modules that should be integrated into Coq's theories.
+
+===========================================================================
+                              CONTENTS
+===========================================================================
+* FILE        : ListDefs.v
+  DESCRIPTION : Useful programs and predicats about polymorphic lists,
+  to be added to the file PolyList.v of Coq's distribution.
+
+* FILE        : StreamDefs.v
+  DESCRIPTION : Useful programs and predicats about polymorphic
+  infinite lists. This is essentially the same file as Stream.v in
+  Coq's theories, plus some necessary renamings for avoiding clashes
+  with some of the constants defined in PolyList.v
+
+* FILE        : MLImport.v
+  DESCRIPTION : Types to be imported from Ocaml to obtain a more efficient
+  respresentation. 
+
+* FILE        : Exceptions.v
+  DESCRIPTION : A general type and some useful functions to deal with
+  exceptions in Coq.
+
+* FILE        : SetOf.v
+  DESCRIPTION : Implementation of a finite sets of elements. Most of
+  the functions are just a renamming for a function in the file
+  ListSet.v in Coq's theories.
+
+===========================================================================
+* FILE        : SimplDecl.v
+  DESCRIPTION : Implementation of a finite mapping Key |-> Data as
+  an ordered association list.
+
+* FILE        : BlockDecl.v
+  DESCRIPTION : Implementation of a finite mapping (list Key) |-> Data
+  as an ordered association list, where some of the entries may be
+  grouped in a list.
+
+* FILE        : Dictionary.v
+  DESCRIPTION : Axiomatisation of a finite mapping (list Key) |-> Data
+  as a hash table, that could be extracted into an Ocaml hash table +
+  a list of keys (for visiting the elements of the table in
+  order). The file SimplDecl.v should be a realization of such
+  axiomatisation using association lists. Finally not used.
+===========================================================================
+
+* FILE        : DecisionProcedures.v
+  DESCRIPTION : Programs or deciding some property P, 
+  that is, functions whose codomain is of the form {P}+{~P}.
+===========================================================================
+
+* FILE        : PrettyPrint.v
+  DESCRIPTION : Rules extending the pretty printer of Coq.
+===========================================================================

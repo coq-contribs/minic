@@ -1,0 +1,30 @@
+StreamDefs.vo: StreamDefs.v
+StreamDefs.vi: StreamDefs.v
+SimplDecl.vo: SimplDecl.v ListDefs.vo PrettyPrint.vo Exceptions.vo
+SimplDecl.vi: SimplDecl.v ListDefs.vo PrettyPrint.vo Exceptions.vo
+SetOf.vo: SetOf.v PrettyPrint.vo ListDefs.vo
+SetOf.vi: SetOf.v PrettyPrint.vo ListDefs.vo
+PrettyPrint.vo: PrettyPrint.v
+PrettyPrint.vi: PrettyPrint.v
+MLImport.vo: MLImport.v
+MLImport.vi: MLImport.v
+ListDefs.vo: ListDefs.v Exceptions.vo PrettyPrint.vo
+ListDefs.vi: ListDefs.v Exceptions.vo PrettyPrint.vo
+Exceptions.vo: Exceptions.v
+Exceptions.vi: Exceptions.v
+Dictionary.vo: Dictionary.v ListDefs.vo Exceptions.vo
+Dictionary.vi: Dictionary.v ListDefs.vo Exceptions.vo
+DecisionProcedures.vo: DecisionProcedures.v
+DecisionProcedures.vi: DecisionProcedures.v
+BlockDecl.vo: BlockDecl.v ListDefs.vo PrettyPrint.vo Exceptions.vo
+BlockDecl.vi: BlockDecl.v ListDefs.vo PrettyPrint.vo Exceptions.vo
+StreamDefs.html: StreamDefs.v
+SimplDecl.html: SimplDecl.v ListDefs.html PrettyPrint.html Exceptions.html
+SetOf.html: SetOf.v PrettyPrint.html ListDefs.html
+PrettyPrint.html: PrettyPrint.v
+MLImport.html: MLImport.v
+ListDefs.html: ListDefs.v Exceptions.html PrettyPrint.html
+Exceptions.html: Exceptions.v
+Dictionary.html: Dictionary.v ListDefs.html Exceptions.html
+DecisionProcedures.html: DecisionProcedures.v
+BlockDecl.html: BlockDecl.v ListDefs.html PrettyPrint.html Exceptions.html
