@@ -286,7 +286,7 @@ Fixpoint listEqBool (l1 : list A) : list B -> bool :=
 End List_Equality.
 
 Section Singleton.
-Variable A : Set.
+Variable A : Type.
 Definition one (x : A) : list A := x :: nil. 
 End Singleton.
 

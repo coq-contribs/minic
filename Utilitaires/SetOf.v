@@ -25,10 +25,10 @@ Set Implicit Arguments.
 Unset Strict Implicit.
 
 Section Finite_Sets.
-Variable A B : Set.
+Variable A B : Type.
 Variable decA : forall x y : A, {x = y} + {x <> y}.
 
-Definition setOf (A : Set) : Set := set A.
+Definition setOf (A : Type) : Type := set A.
 Definition Member (x : A) (s : setOf A) : Prop := set_In x s.
 Definition set_memDec (x : A) (s : setOf A) :
   {Member x s} + {~ Member x s} := set_In_dec decA x s.
@@ -41,7 +41,7 @@ Defined.
 Definition set_image (f : A -> B) (s : setOf A) : setOf B := set_map f s.
 
 Definition set_cardinal (s : setOf A) : nat := length s.
-Definition set_fold (C : Set) (f : A -> C -> C) (s : setOf A) 
+Definition set_fold (C : Type) (f : A -> C -> C) (s : setOf A) 
   (c : C) : C := fold_right f c s.
 
 Definition Included (s1 s2 : setOf A) : Prop := incl s1 s2.
@@ -55,7 +55,7 @@ Hint Unfold Member: fsets.
 End Finite_Sets.
 
 Section Union_On_Family.
-Variable A B : Set.
+Variable A B : Type.
 Variable decB : forall x y : B, {x = y} + {x <> y}.
 Definition set_imageUnion (f : A -> setOf B) (s : setOf A) : 
   setOf B := set_fold (fun x s => set_union decB (f x) s) s (set_empty B).
