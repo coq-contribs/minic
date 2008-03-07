@@ -1,2 +1,18 @@
-Utilitaires
-MiniC
+-R . minic
+Utilitaires/StreamDefs.v
+Utilitaires/Exceptions.v
+Utilitaires/SimplDecl.v
+Utilitaires/MLImport.v
+Utilitaires/SetOf.v
+Utilitaires/DecisionProcedures.v
+Utilitaires/PrettyPrint.v
+Utilitaires/Dictionary.v
+Utilitaires/ListDefs.v
+Utilitaires/BlockDecl.v
+MiniC/CSemantics.v
+MiniC/Memory.v
+MiniC/BasicTypes.v
+MiniC/State.v
+MiniC/Stack.v
+MiniC/CAbstractSyntax.v
+
