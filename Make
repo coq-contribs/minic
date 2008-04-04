@@ -1,4 +1,4 @@
--R . minic
+-R . MiniC
 Utilitaires/StreamDefs.v
 Utilitaires/Exceptions.v
 Utilitaires/SimplDecl.v
