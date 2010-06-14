@@ -27,6 +27,7 @@ Unset Strict Implicit.
 Section Finite_Sets.
 Variable A B : Type.
 Variable decA : forall x y : A, {x = y} + {x <> y}.
+Variable decB : forall x y : B, {x = y} + {x <> y}.
 
 Definition setOf (A : Type) : Type := set A.
 Definition Member (x : A) (s : setOf A) : Prop := set_In x s.
@@ -38,7 +39,7 @@ Lemma set_isEmpty : forall s : setOf A, {s = set_empty} + {s <> set_empty}.
 intro s; case s; [ left; reflexivity | right; discriminate ].
 Defined.
 
-Definition set_image (f : A -> B) (s : setOf A) : setOf B := set_map f s.
+Definition set_image (f : A -> B) (s : setOf A) : setOf B := set_map decB f s.
 
 Definition set_cardinal (s : setOf A) : nat := length s.
 Definition set_fold (C : Type) (f : A -> C -> C) (s : setOf A) 
