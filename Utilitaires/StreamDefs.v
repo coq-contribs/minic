@@ -34,7 +34,7 @@
 (*                      with their list counterpart                         *)
 (* -------------------------------------------------------------------------*)
 
-Require Import TheoryList.
+Require Import List.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
