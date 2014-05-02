@@ -98,7 +98,7 @@ Definition sdecl_zip (lk : list Key) (ld : list Data) : sdecl :=
 Section Sdecl_Filter.
 Variable p : Key -> Data -> bool.
 Definition sdecl_filter (m : sdecl) : sdecl :=
-  filter (fun x => p (fst x) (snd x)) m.
+  filter (fun (x : Key * Data) => p (fst x) (snd x)) m.
 End Sdecl_Filter.
 
 Fixpoint sdecl_chng (m : sdecl) : Key -> Data -> exc sdecl Key :=

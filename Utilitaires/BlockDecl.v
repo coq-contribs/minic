@@ -103,18 +103,18 @@ Definition bdecl_addShdw (m : bdecl) (k : list Key)
   (d : Data) : bdecl := (k, d) :: m.
 
 Definition bdecl_union (m1 m2 : bdecl) : bdecl :=
-  fold_right (fun p d => bdecl_add d (fst p) (snd p)) m2 m1.
+  fold_right (fun (p : list Key * Data) d => bdecl_add d (fst p) (snd p)) m2 m1.
 
 
 
 Section Bdecl_Filter.
 Variable p : list Key -> Data -> bool.
 Definition bdecl_filter (m : bdecl) : bdecl :=
-  filter (fun x => p (fst x) (snd x)) m.
+  filter (fun x : list Key * Data => p (fst x) (snd x)) m.
 End Bdecl_Filter.
 
 Definition bdecl_toList (m : bdecl) : list (Key * Data) :=
-  fold_right (fun kld l => map (fun k => (k, snd kld)) (fst kld) ++ l) nil m.
+  fold_right (fun (kld : list Key * Data) l => map (fun k => (k, snd kld)) (fst kld) ++ l) nil m.
 
 Definition bdecl_toLists (m : bdecl) : list (list Key * Data) := m.
 

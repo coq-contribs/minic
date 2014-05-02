@@ -75,7 +75,7 @@ Axiom
   dico_Filter :
     forall (p : Key -> Data -> bool) (m : dictionary Key Data),
     dico_toList (dico_filter p m) =
-    filter (fun x => p (fst x) (snd x)) (dico_toList m).
+    filter (fun x : Key * Data => p (fst x) (snd x)) (dico_toList m).
  
 Definition dico_AssocValIs (m : dictionary Key Data) 
   (k : Key) (d : Data) : Prop := dico_map m k = d.
