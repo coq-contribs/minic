@@ -27,6 +27,7 @@ Require Import List.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
+Unset Standard Proposition Elimination Names.
 
 Section ForAll_Properties.
 Variable A B C D : Set.

@@ -30,6 +30,7 @@ Require Import Exceptions.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
+Unset Standard Proposition Elimination Names.
 
 Section Block_Of_Variables_Declaration.
 
