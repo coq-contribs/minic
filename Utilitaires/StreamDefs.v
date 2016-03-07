@@ -115,12 +115,12 @@ Ltac coinduction proof :=
 
 
 Theorem EqSt_reflex : forall s : Stream, EqSt s s.
-coinduction ipattern:EqSt_reflex.
+coinduction ipattern:(EqSt_reflex).
 reflexivity.
 Qed.
 
 Theorem sym_EqSt : forall s1 s2 : Stream, EqSt s1 s2 -> EqSt s2 s1.
-coinduction ipattern:Eq_sym.
+coinduction ipattern:(Eq_sym).
 case H; intros; symmetry  in |- *; assumption.
 case H; intros; assumption.
 Qed.
@@ -128,7 +128,7 @@ Qed.
 
 Theorem trans_EqSt :
  forall s1 s2 s3 : Stream, EqSt s1 s2 -> EqSt s2 s3 -> EqSt s1 s3.
-coinduction ipattern:Eq_trans.
+coinduction ipattern:(Eq_trans).
 transitivity (hd s2).
 case H; intros; assumption.
 case H0; intros; assumption.
@@ -155,7 +155,7 @@ Qed.
 Theorem ntheq_eqst :
  forall s1 s2 : Stream,
  (forall n : nat, Str_nth n s1 = Str_nth n s2) -> EqSt s1 s2.
-coinduction ipattern:Equiv2.
+coinduction ipattern:(Equiv2).
 apply (H 0).
 intros n; apply (H (S n)).
 Qed.
