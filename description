@@ -1,6 +1,6 @@
 Name: MiniC
 Title: Semantics of a subset of the C language
-Author: Eduardo Giménez and Emmanuel Ledinot 
+Author: Eduardo GimÃ©nez and Emmanuel Ledinot 
 Institution: Dassault-Aviation
 Description: This contribution defines the denotational semantics of MiniC, a
 sub-set of the C language. This sub-set is sufficiently large to
