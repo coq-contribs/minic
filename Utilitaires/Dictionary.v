@@ -38,7 +38,7 @@ Notation dico := (dictionary Key Data) (only parsing).
 Definition dico_result : Set := exc Data Key.
 Definition dico_def (d : Data) : dico_result := Value Key d. 
 Definition dico_unDef (k : Key) : dico_result := Error Data k. 
-Coercion Local dico_def : Data >-> dico_result. 
+Local Coercion dico_def : Data >-> dico_result. 
 
 Parameter dico_empty : dictionary Key Data.
 Parameter

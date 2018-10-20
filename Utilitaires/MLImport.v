@@ -27,6 +27,6 @@ Inductive option : Set :=
   | None : option
   | Some : A -> option.
 
-Coercion Local Some : A >-> option. 
+Local Coercion Some : A >-> option. 
 
 End Option.
