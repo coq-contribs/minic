@@ -27,7 +27,6 @@ Require Import List.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
-Unset Standard Proposition Elimination Names.
 
 Section ForAll_Properties.
 Variable A B C D : Set.
@@ -296,7 +295,7 @@ Variable A : Set.
 Variable eqA : forall x y : A, {x = y} + {x <> y}.
 
 Definition inclDec : forall l1 l2 : list A, {incl l1 l2} + {~ incl l1 l2}.
-fix 1; intros l1 l2.
+fix inclDec 1; intros l1 l2.
   case l1.
    left; unfold incl in |- *; intros a abs; inversion abs.
     intros a l.
